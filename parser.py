@@ -4,7 +4,7 @@ from biothings.utils.dataload import dict_convert, dict_sweep
 from biothings import config
 logging = config.logger
 def load_mitomap(data_folder):
-    infile = os.path.abspath("/opt/biothings/GRCh37/ExAC/r1/Exac.tsv")
+    infile = os.path.abspath("/opt/biothings/GRCh37/mitomap/mitomap.tsv")
     assert os.path.exists(infile)
     dat = pandas.read_csv(infile,sep="\t",squeeze=True,quoting=csv.QUOTE_NONE).to_dict(orient='records')
     results = {}
